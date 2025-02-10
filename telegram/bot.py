@@ -15,10 +15,14 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
 # Configuration
-TELEGRAM_TOKEN = os.getenv('6198191947:AAHnUnTQU3BDWoG6Qr5vTerqMXhQdvbvQyM')
-ALPACA_API_KEY = os.getenv('PKT5UWN61WQH0D8UOYPS')
-ALPACA_SECRET_KEY = os.getenv('VpvTIZXUDEBhdeIpmL6ubQFMWO48thNRSabb9tmp')
-ALPACA_BASE_URL = 'https://paper-api.alpaca.markets'
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+ALPACA_API_KEY = os.getenv("APCA_API_KEY_ID")
+ALPACA_SECRET_KEY = os.getenv("APCA_API_SECRET_KEY")
+ALPACA_BASE_URL = os.getenv("APCA_API_BASE_URL")
 
 # Initialize Alpaca API
 api = tradeapi.REST(ALPACA_API_KEY, ALPACA_SECRET_KEY, ALPACA_BASE_URL)
