@@ -20,7 +20,7 @@ import os
 
 load_dotenv()
 
-TELEGRAM_TOKEN = os getenv("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 ALPACA_API_KEY = os.getenv("APCA_API_KEY_ID")
 ALPACA_SECRET_KEY = os.getenv("APCA_API_SECRET_KEY")
 ALPACA_BASE_URL = os.getenv("APCA_API_BASE_URL")
