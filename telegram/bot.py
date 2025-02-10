@@ -92,7 +92,11 @@ class StockDataEngine:
 # Trading Strategy Core
 class StockTradingSystem:
     def __init__(self):
-        self.model = self.load_model()
+        self.model = self.load_model()  # Calling load_model()
+
+    def load_model(self):
+        print("Loading model...")  
+        return None  # Replace with actual model loading code
         self.data_engine = StockDataEngine()
         self.risk_params = {
             'max_position_size': 0.1,  # 10% of portfolio per trade
